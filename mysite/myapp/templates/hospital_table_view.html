@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block content %}
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 0;
+    }
+
+    .table-container {
+        margin: 20px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f2f2f2;
+        color: #333;
+        text-transform: uppercase;
+    }
+
+    td {
+        color: #444;
+    }
+
+    a {
+        text-decoration: none;
+        color: #007bff;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+
+	<section class="header">
+
+        <nav>
+            <a href="/"><img src="..\static\myapp\Prakrithiveda.png" alt="logo"></a>
+            <div class="nav-links" id="navLinks">
+                <!-- <i class="fa-solid fa-xmark" onclick="hideMenu()"></i> -->
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/herb_detection_page">Herb Detector</a></li>
+                    <li><a href="/hospitallocator">Hospital Locator</a></li>
+                    <li><a href="/medicine_data_page">Medicines</a></li>
+                </ul>
+            </div>
+            <!-- <i class="fa-solid fa-bars" onclick="showMenu()"></i> -->
+        </nav>
+        <table id="hospitalTable">
+            <thead>
+              <tr>
+                <th>Hospital Name</th>
+                <th>Contact</th>
+                <th>Location</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for hospital in hospitals %}
+              <tr>
+                <td>{{ hospital.name }}</td>
+                <td>{{ hospital.contact }}</td>
+                <td><a href="https://www.google.com/maps/search/?api=1&query={{ hospital.latitude }},{{ hospital.longitude }}" target="_blank">View on Google Maps</a></td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+      </section>
+  
+  
+  
+  {% endblock %}
+  

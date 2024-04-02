@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block content %}
+<style type="text/css">
+  .hero{
+      max-width: 114rem;
+      height: 40rem;
+      background: url('../static/myapp/hero.jpg');
+    }
+    .hero .nav-links{
+       margin-top: -500px;
+       padding: 8px 12px;
+    }
+</style>
+<header>
+  <nav class="hero">
+  <!--<a href="index.html"><img src="images/logo.png" alt="logo" /></a>-->
+    <div class="nav-links" id="navLinks">
+      <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/herb_detection_page">Herb Detector</a></li>
+        <li><a href="/hospitallocator">Hospital Locator</a></li>
+        <li><a href="/medicine_data_page">Medicines</a></li>
+      </ul>
+    </div>
+    <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+  </nav>
+</header>
+<div class="container">
+  <main>
+    <h2>Glimpses of Ayurveda</h2>
+    <div class="content">
+      <p>Ayurveda is considered as one of the oldest of the traditional systems of medicine (TSMs) accepted worldwide. The ancient wisdom in this traditional system of medicine is still not exhaustively explored. The junction of the rich knowledge from different traditional systems of medicine can lead to new avenues in herbal drug discovery process. The lack of the understanding of the differences and similarities between the theoretical doctrines of these systems is the major hurdle towards their convergence apart from the other impediments in the discovery of plant based medicines. This review aims to bring into limelight the age old history and the basic principles of Ayurveda. This would help the budding scholars, researchers and practitioners gain deeper perspicuity of traditional systems of medicine, facilitate strengthening of the commonalities and overcome the challenges towards their global acceptance and harmonization of such medicinal systems.</p>
+      <hr>
+      <h4>Introduction</h4>
+      <p>Ayurveda is one of the most renowned traditional systems of medicine that has survived and flourished from ages till date. With the enormous knowledge of nature based medicine, the relationship of human body constitution and function to nature and the elements of the universe that act in coordination and affect the living beings, this system will continue to flourish in ages still to come. There are many avenues still to be explored by the researchers, practitioners and experts in the field who carry the responsibility of keeping the traditional systems of medicine (TSMs) alive and contributing to their growth in the future. However, due to many barriers such as lack of literature sources in different languages and insufficiency of awareness about the basic principles and histories of the systems from different ethnic origins, there is a lacuna of exchange of information from systems around the globe. Knowledge of systems from different ethnic origins would bring about interchange of knowledge and increase the understanding of different systems, and this can ultimately contribute to integration and advancement of herbal drug research when accompanied by collaborative work of researchers from different countries. These futuristic goals can be accomplished when one gains insights about the systems, the principles and histories and works upon the strengthening aspects common between the various TSMs. In this review, we have made an attempt to put forth the basic principles of doctrine and history of Ayurveda to contribute to the above said perspectives.
+
+        To date, there have been several reviews detailing Ayurveda. However, very few reviews detail the modalities of the basic principles and history of Ayurveda.1 Through this review the authors wish to provide the readers an understanding of the age old history and the basic principles of Ayurveda.</p>
+      <hr>
+      <h4>Basic doctrine principles of Ayurveda</h4>
+      <p>Ayurveda, a time-honored traditional system of medicine, is rooted in the belief that the universe is composed of five elements: Vayu (Air), Jala (Water), Aakash (Space or ether), Prithvi (Earth), and Teja (Fire). These elements, collectively known as Pancha Mahabhoota, are thought to form the basis for the three fundamental humors of the human body—Vata dosha, Pitta dosha, and Kapha dosha. The balance of these doshas is crucial for maintaining optimal physiological functions, and any imbalance is believed to lead to states of illness or disease.
+      <br><br>
+        Within the framework of Ayurveda, the human body is viewed as consisting of Saptadhatus, or seven tissues, including Rasa (tissue fluids), Meda (fat and connective tissue), Rakta (blood), Asthi (bones), Majja (marrow), Mamsa (muscle), and Shukra (semen). Additionally, three Malas, or waste products—Purisha (faeces), Mutra (urine), and Sweda (sweat)—play a role in maintaining overall health. Ayurveda posits that the proper balance between these elements and doshas is essential for a state of well-being, emphasizing the interconnectedness of the body and nature.<br><br>
+        
+        The doctrine of Ayurveda extends beyond the physical components of the body to encompass the Tri Malas and Trayo Dosa Agni. The Tri Malas refer to the three types of waste products—Mutra, Purisa, and Sveda—that result from metabolic and digestive processes. Maintaining balance between the Tridosha is considered crucial for effective elimination of these waste products, preventing complications such as diarrhea, constipation, and other health issues.
+        <br><br>
+        Ayurveda's holistic approach also incorporates the concept of Agni, the biological fire responsible for metabolic functions. The thirteen categories of Agni, with a central focus on Jatharagni, the digestive fire, highlight the intricate relationship between Agni, Pitta, and Vata. Imbalances in Agni are believed to lead to discomfort in the gastrointestinal tract, contributing to conditions like ulcers, diarrhea, and constipation. Ayurvedic principles guide individualized treatment strategies based on factors such as bodily constitution, pathological history, dosha characteristics, lifestyle, and environmental conditions.
+        <br><br>
+        In practical terms, Ayurveda employs a therapeutic method known as Pancha karma, consisting of five actions aimed at rejuvenating the body, cleansing toxins, and promoting longevity. This method involves processes like Virechan (purgation), Vaman (therapeutic emesis), Basti (enemas), Rakta moksha (blood detoxification), and Nasya (administration through the nasal route). Furthermore, Ayurveda encompasses eight disciplines, including internal medicine, pediatrics, surgery, and toxicology, showcasing its comprehensive approach to healthcare.
+        <br><br>
+         Ayurveda's fundamental principles encompass the intricate balance between the elements, doshas, tissues, waste products, and the transformative role of Agni. This holistic system offers personalized treatment strategies, emphasizing the interconnectedness of the individual with nature and the importance of maintaining equilibrium for overall well-being.</p>
+         <hr>
+         <h4>Allied systems of medicine in Ayurveda: A brief overview</h4>
+         <p>India boasts a rich history of traditional medicine encompassing six systems, with Ayurveda standing out as the most ancient and widely practiced. Among the other Indian systems are Unani, Siddha, Homeopathy, Yoga, and Naturopathy. Ayurveda, with its global prevalence, is the dominant system discussed in this paper, while Siddha, Homeopathy, and Unani follow in usage. Naturopathy, still developing, may emerge as a flourishing system, while Yoga addresses physical, mental, and spiritual well-being.
+          <br><br>
+          The <span>Siddha</span> system aligns with Ayurveda, viewing the human body's constitution from the five elements, emphasizing 96 factors governing well-being. Perception, a key determinant, guides psychosomatic treatment using minerals, metals, and plant products. Siddha employs plant and mineral preparations in powder form through various procedures, including calcinations.
+          <br><br>
+          <span>Unani, </span> rooted in Greece, follows the humoral theory introduced by Hippocrates. Brought to India by Arabs, it gained strength when scholars fled Persia. Recognized by the Indian government, Unani utilizes plant-based formulations like oils, tinctures, powders, and ointments.
+          <br><br>
+          <span>Homeopathy, </span> introduced by Dr. Samuel Hahnemann, relies on immunological memory and similarity between drug and disease. Practiced in India for over a century, it forms an integral part of traditional medicine. Recognized by the government, homeopathy uses diluted and succussed aqueous extracts of substances for low-potency formulations.
+          <br><br>
+          <span>Yoga, </span>originating in ancient India, offers therapies based on pulse diagnosis and Tridosha analysis. It suggests meditative exercises and lifestyle management for tranquility and health improvement. Yoga's asanas find application in various clinical and non-clinical conditions.
+          <br><br>
+          <span>Naturopathy, </span>originating in 19th-century Germany, is practiced in multiple countries. Though not ancient, some traditional medicine practitioners combine it with major systems. Naturopathy relies on nature's curative power, incorporating herbal formulations, hydrotherapy, and homeopathy as treatment methods.</p>
+          <hr>
+          <h4>Current status of Ayurveda and perspectives for its future applications</h4>
+          <p>
+            In recent decades, Ayurveda has undergone a notable paradigm shift, with researchers now viewing its applications in a different light. The therapeutic focus of Ayurveda revolves around prakriti and tridoshas, asserting that each individual possesses a unique constitution known as prakriti. This constitution determines how individuals respond to medications, environmental factors, and dietary influences. The emerging field of ‘Ayurgenomics’ bridges the gap between genomics and Ayurveda, aiding in comprehending inter-individual variations in responses to therapies across various diseases. This research particularly emphasizes studying such variances among individuals with similar ethnic backgrounds. Traditional systems of medicine (TSMs) are increasingly being considered as an alternative to address some of the limitations faced by Western medicine, including the need for personalized therapies, potential side effects, and the quest for desired therapeutic efficacy.
+            <br><br>
+            Rotti et al. have conducted numerous studies linking the Ayurvedic concept of prakriti to contemporary science. One report correlated the dominant prakriti with Body Mass Index (BMI) and place of birth in individuals. Studies on various prakriti types, such as Vata, Pitta, and Kapha, aimed to identify molecular differences influencing susceptibility and responses to different environmental or disease conditions. A classification method based on DNA methylation signatures aligning with the traditional Ayurvedic concept of prakriti was reported. A genome-wide SNP study involving 262 male individuals with different prakritis revealed an association between the PGM1 gene and energy production, with Pitta prakriti showing greater homogeneity compared to Kapha and Vata prakritis.
+            <br><br>
+            Integrating modern analytical techniques with a broader perspective on applying Ayurvedic principles can enhance its global acceptance. There is an escalating need to establish and promote the scientific basis of Ayurvedic principles to ensure the longevity of this ancient and valuable system of medicine as a living tradition in the future.</p>
+    </div>
+</div>
+{% endblock %}
