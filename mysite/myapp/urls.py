@@ -8,5 +8,7 @@ urlpatterns = [
     path('hospitallocator', views.hospitallocator, name='hospitallocator'),
     path('hospital_table_view', views.hospital_table_view, name='hospital_table_view'),
     path('herb_detection_page', views.herb_detection_page, name='herb_detection_page'),
+    path('herb_detection_page2', views.herb_detection_page2, name='herb_detection_page2'),
+    path('herb_ml', views.herb_ml, name='herb_ml'),
     path('medicine_data_page', views.medicine_data_page, name='medicine_data_page'),
 ]

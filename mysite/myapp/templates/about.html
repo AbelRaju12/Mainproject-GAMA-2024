@@ -1,14 +1,25 @@
 {% extends "base.html" %}
 {% block content %}
 <style type="text/css">
+  body{
+    background-color: white;
+  }
+  .nav-links ul li a {
+    color: white; /* Change anchor tag color to black */
+  }
   .hero{
       max-width: 114rem;
       height: 40rem;
-      background: url('../static/myapp/hero.jpg');
+      background: url('../static/myapp/ayur.jpg');
+      background-size: cover;  /* New property */
+
     }
     .hero .nav-links{
        margin-top: -500px;
        padding: 8px 12px;
+    }
+    .footer{
+      background-color: #DBD4D4;
     }
 </style>
 <header>
@@ -19,7 +30,7 @@
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
-        <li><a href="/herb_detection_page">Herb Detector</a></li>
+        <li><a href="/herb_ml">Herb Detector</a></li>
         <li><a href="/hospitallocator">Hospital Locator</a></li>
         <li><a href="/medicine_data_page">Medicines</a></li>
       </ul>

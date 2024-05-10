@@ -13,6 +13,12 @@
       background-size: cover;
       position: relative;
     }
+    h1 {
+      color: white;
+      text-align: center;
+      font-weight: bold;
+      font-family: serif;
+    }
     *{
       margin: 0;
       padding: 0;
@@ -70,7 +76,7 @@
       text-align: center;
       padding: 30px 0;
       border: 5px solid rgb(75, 72, 72);
-      background-color: rgb(50, 108, 68);
+      background-color: #DBD4D4;
     }
     .footer h4{
       margin-bottom: 25px;
@@ -92,14 +98,14 @@
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="/about">About</a></li>
-                    <li><a href="/herb_detection_page">Herb Detector</a></li>
+                    <li><a href="/herb_ml">Herb Detector</a></li>
                     <li><a href="/hospitallocator">Hospital Locator</a></li>
                     <li><a href="/medicine_data_page">Medicines</a></li>
                 </ul>
             </div>
             <!-- <i class="fa-solid fa-bars" onclick="showMenu()"></i> -->
         </nav>
-        
+        {% comment %} <h1>Leaf Detection</h1> {% endcomment %}
         <section class="vh-100 gradient-custom">
           <div class="container py-4 h-90">
             <div class="row d-flex justify-content-center align-items-center h-100">
