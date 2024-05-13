@@ -66,6 +66,9 @@ def hospital_table_view(request):
 def herb_ml(request):
     return render(request, 'herb_ml.html')
 
+
+from .herb_description import labels_info
+
 def herb_detection_page(request):
     if request.method == "POST":
         my_uploaded_file = request.FILES['my_uploaded_file'].read()
@@ -92,7 +95,6 @@ def herb_detection_page(request):
                      'Common rue(naagdalli)',
                      'Coriender',
                      'Curry',
-                     'Doddpathre',
                      'Drumstick',
                      'Ekka',
                      'Eucalyptus',
@@ -105,6 +107,7 @@ def herb_detection_page(request):
                      'Henna',
                      'Hibiscus',
                      'Honge',
+                     'Indian_Borage',
                      'Insulin',
                      'Jackfruit',
                      'Jasmine',
@@ -138,7 +141,7 @@ def herb_detection_page(request):
                      'Sapota',
                      'Seethaashoka',
                      'Seethapala',
-                     'Spinach1',
+                     'Spinach',
                      'Tamarind',
                      'Taro',
                      'Tecoma',
@@ -167,10 +170,23 @@ def herb_detection_page(request):
         score = tf.nn.sigmoid(predictions[0])
 
         image_url = "/static/myapp/TestImage.jpg"
+        herb_label = labels[np.argmax(score)]
         result = "This image most likely belongs to {} with a {:.2f} percent confidence.".format(labels[np.argmax(score)], 100 * np.max(score))
-        google_search = "https://www.google.com/search?q={}_herb".format(labels[np.argmax(score)])
+        google_search = "https://www.google.com/search?q={}%20herb".format(labels[np.argmax(score)])
         
-        return render(request, "resultpage.html",context={"result":result, "image_url":image_url, "google_search":google_search})
+        # Fetching herb information
+        herb_description = labels_info[herb_label]['description']
+        scientific_name = labels_info[herb_label]['scientific_name']
+        uses = labels_info[herb_label]['uses']
+
+        return render(request, "resultpage.html", context={
+            "result": result, 
+            "image_url": image_url, 
+            "herb_description": herb_description,
+            "scientific_name": scientific_name,
+            "uses": uses,
+            "google_search": google_search
+        })
     return render(request, 'herb_detection_page.html')
 
 def herb_detection_page2(request):
@@ -179,7 +195,7 @@ def herb_detection_page2(request):
 
         labels = ['Aloevera',
                   'Amla',
-                  'Amruta_Balli',
+                  'Amruthaballi',
                   'Arali',
                   'Ashoka',
                   'Ashwagandha',
@@ -190,15 +206,15 @@ def herb_detection_page2(request):
                   'Betel_Nut',
                   'Brahmi',
                   'Castor',
-                  'Curry_Leaf',
-                  'Doddapatre',
+                  'Curry',
                   'Ekka',
                   'Ganike',
-                  'Gauva',
+                  'Guava',
                   'Geranium',
                   'Henna',
                   'Hibiscus',
                   'Honge',
+                  'Indian_Borage',
                   'Insulin',
                   'Jasmine',
                   'Lemon',
@@ -215,7 +231,7 @@ def herb_detection_page2(request):
                   'Raktachandini',
                   'Rose',
                   'Sapota',
-                  'Tulasi', 
+                  'Tulsi', 
                   'Wood_sorel']
 
         file_name = "{}{}.jpg".format(os.path.join(BASE_DIR, 'myapp/static/myapp/'),"TestImage")
@@ -234,10 +250,23 @@ def herb_detection_page2(request):
         score = tf.nn.sigmoid(predictions[0])
 
         image_url = "/static/myapp/TestImage.jpg"
+        herb_label = labels[np.argmax(score)]
         result = "This image most likely belongs to {} with a {:.2f} percent confidence.".format(labels[np.argmax(score)], 100 * np.max(score))
-        google_search = "https://www.google.com/search?q={}_herb".format(labels[np.argmax(score)])
+        google_search = "https://www.google.com/search?q={}%20herb".format(labels[np.argmax(score)])
         
-        return render(request, "resultpage.html",context={"result":result, "image_url":image_url, "google_search":google_search})
+        # Fetching herb information
+        herb_description = labels_info[herb_label]['description']
+        scientific_name = labels_info[herb_label]['scientific_name']
+        uses = labels_info[herb_label]['uses']
+
+        return render(request, "resultpage.html", context={
+            "result": result, 
+            "image_url": image_url, 
+            "herb_description": herb_description,
+            "scientific_name": scientific_name,
+            "uses": uses,
+            "google_search": google_search
+        })
     return render(request, 'herb_detection_page2.html')
 
 def medicine_data_page(request):

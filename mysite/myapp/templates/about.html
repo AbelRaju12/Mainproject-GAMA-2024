@@ -7,6 +7,15 @@
   .nav-links ul li a {
     color: white; /* Change anchor tag color to black */
   }
+  .nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336; /* This sets the color of the line to red */
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+  }
   .hero{
       max-width: 114rem;
       height: 40rem;
