@@ -36,3 +36,6 @@ Server Side
 Database
 
     SQLite: A lightweight, open-source relational database management system used for efficient data storage, retrieval, and manipulation, ensuring the seamless operation of the application's backend infrastructure.
+
+Note:
+Dataset used in this project is "https://www.kaggle.com/datasets/aryashah2k/indian-medicinal-leaves-dataset" the data obtained from here. We made some tweaks of our own to improve the detection as well as corrected some wrongly classified images.
