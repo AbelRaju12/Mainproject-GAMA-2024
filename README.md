@@ -1,3 +1,5 @@
+**Switch to master-branch for the code**
+
 Prakrthiveda 🌿
 
 Welcome to Prakrthiveda, a comprehensive and user-friendly web application dedicated to providing extensive information on Ayurveda, Ayurvedic medicines, and medicinal herbs. This repository contains the codebase for our college project, which aims to bridge the gap between traditional Ayurvedic knowledge and modern technology.
